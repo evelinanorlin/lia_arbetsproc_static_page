@@ -14,9 +14,10 @@ let menuOpen = false;
 // check if there is an Array in local storage, otherwise create one
 let nameArray;
 let retrievedData = localStorage.getItem("nameArray");
+let retrievedArray = JSON.parse(retrievedData);
 
 if(retrievedData.length > 0){
-  nameArray = JSON.parse(retrievedData)
+  nameArray = retrievedArray;
 } else{
   nameArray = [];
   localStorage.setItem("nameArray", JSON.stringify(nameArray));
