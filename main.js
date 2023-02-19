@@ -16,7 +16,9 @@ let nameArray;
 let retrievedData = localStorage.getItem("nameArray");
 let retrievedArray = JSON.parse(retrievedData);
 
-if(retrievedData.length > 0){
+console.log(retrievedArray);
+
+if(retrievedArray.length > 0){
   nameArray = retrievedArray;
 } else{
   nameArray = [];
